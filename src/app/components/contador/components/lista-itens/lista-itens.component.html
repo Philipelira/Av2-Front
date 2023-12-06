@@ -1,0 +1,13 @@
+<p>At2,3</p>
+<div class="add-item-container">
+  <input [(ngModel)]="novoItemTexto" placeholder="Adicionar novo item (limite 100 caracteres)" maxlength="100" (input)="onInputChange($event)" />
+  <button (click)="adicionarItem()">Adicionar</button>
+</div>
+
+<ul>
+  <li *ngFor="let item of itemLista" [class.concluido]="item.concluido">
+    {{ item.texto }}
+    <button (click)="removerItem(itemLista.indexOf(item))">delete 🗑️</button>
+    <button (click)="concluirItem(itemLista.indexOf(item))">check ✅</button>
+  </li>
+</ul>

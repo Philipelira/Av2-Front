@@ -1,0 +1,44 @@
+/* controle-acesso.component.css */
+
+div {
+    text-align: center;
+  }
+  
+  /* Estilos para os botões */
+  button {
+    padding: 10px;
+    margin: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  /* Estilos específicos para cada tipo de usuário */
+  #administrador {
+    background-color: #3498db;
+    color: #fff;
+  }
+  
+  #colaborador {
+    background-color: #2ecc71;
+    color: #fff;
+  }
+  
+  #usuario {
+    background-color: #e74c3c;
+    color: #fff;
+  }
+  
+  /* Estilos para a mensagem de permissão */
+  .mensagem {
+    font-size: 18px;
+    margin-top: 20px;
+    display: none; /* Inicialmente oculto */
+  }
+  
+  /* Mostra a mensagem correspondente quando o botão é clicado */
+  #administrador.active + .mensagem.administrador,
+  #colaborador.active + .mensagem.colaborador,
+  #usuario.active + .mensagem.usuario {
+    display: block;
+  }
+  

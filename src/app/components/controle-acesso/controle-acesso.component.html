@@ -1,0 +1,11 @@
+<p>At5</p>
+<div>
+    <button id="administrador" [class.active]="tipoUsuarioSelecionado === 'administrador'" (click)="selecionarTipoUsuario('administrador')">Administrador</button>
+    <button id="colaborador" [class.active]="tipoUsuarioSelecionado === 'colaborador'" (click)="selecionarTipoUsuario('colaborador')">Colaborador</button>
+    <button id="usuario" [class.active]="tipoUsuarioSelecionado === 'usuario'" (click)="selecionarTipoUsuario('usuario')">Usuário</button>
+  
+    <p *ngIf="tipoUsuarioSelecionado === 'administrador'">Você tem permissão de administrador</p>
+    <p *ngIf="tipoUsuarioSelecionado === 'colaborador'">Você tem permissão de colaborador</p>
+    <p *ngIf="tipoUsuarioSelecionado === 'usuario'">Você tem permissão de usuário</p>
+  </div>
+  

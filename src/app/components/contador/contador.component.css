@@ -1,0 +1,14 @@
+.at1 {
+    display: flex;
+    align-items: center;
+  }
+  
+  h3 {
+    margin: 0;
+    padding: 0 10px;
+  }
+  
+  button {
+    margin: 0 5px;
+  }
+  
